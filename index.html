@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+	
+	<title>San Jose State University Men's Rugby Page</title>
+</head>
+
+<body ng-app="myApp">
+<div id="wrapper">
+	<header>
+		<div class="container-fluid top">
+			<img class="teamphoto" src="{{ url_for('static', filename='img/sjsuheader.png')}}">
+		</div>
+	</header>
+
+	
+	{% set navigation_bar = [
+		('/home', 'home', 'Home'),
+		('/schedule', 'schedule', 'Schedule'),
+		('/roster', 'roster', 'Roster'),
+		('/location', 'location', 'Location'),
+		('/media', 'media', 'Media'),
+		('/information', 'information', 'Information'),
+		('/contact', 'contact', 'Contact')
+	] %}
+
+	{% set active_page = active_page|default('index') %}
+
+	<nav class="navbar navbar-default affix" data-spy="affix" data-offset-top="200">
+		<div class="container-fluid">
+			<div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		    </div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+			    <ul class="nav navbar-nav">
+			    {% for href, id, caption in navigation_bar %}
+		  			<li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+				{% endfor %}
+			    </ul>
+			</div>
+		</div>
+	</nav>
+
+	{% block body %}
+	{% endblock %}
+
+	<footer>
+		<div class="footer">
+			<center>
+				<ul class="bottom">
+		    		<li><a class="icon" href="https://www.facebook.com/SJSURugby/"><img src="static/img/facebook.png"> Facebook</a></li>
+					<li><a class="icon" href="https://twitter.com/sjsurugby"><img src="static/img/twitter.png"> Twitter</a></li>
+				</ul>
+				<br>
+				<p class="copyright">&copy; SJSU Men's Rugby Club</p>
+			</center>
+		</div>
+	</footer>
+	</div>
+</body>
+
+</html>
