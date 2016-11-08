@@ -52,6 +52,10 @@
 	margin: 0 auto;
 }
 
+iframe {
+	width: 90%;
+}
+
 .item img {
 	width: auto;
 	height: 300px;
@@ -98,22 +102,16 @@ hr {
 	padding: 20px;
 }
 
-td {
-	padding: 10px;
-}
-
 /* Schedule Page */
 .schedule {
 	padding: 20px;
 }
 
-
-
 /* Navbar */
-.affix { 
-	top: 0; 
-	width: 100%; 
-	z-index: 9999 !important; 
+.affix {
+	top: 0;
+	width: 100%;
+	z-index: 9999 !important;
 }
 
 .affix + .container-fluid { padding-top: 50px; }
@@ -136,7 +134,7 @@ td {
 .navbar .navbar-nav > li {
 	float: none;
 	display: inline-block;
-	font-size: 20px;
+	font-size: 15px;
 	font-family: Impact, Charcoal, sans-serif;
 	position: relative;
 }
@@ -145,8 +143,8 @@ td {
 	position: fixed;
 }
 
-.navbar-default .navbar-nav>.active> a, 
-.navbar-default .navbar-nav>.active> a:focus, 
+.navbar-default .navbar-nav>.active> a,
+.navbar-default .navbar-nav>.active> a:focus,
 .navbar-default .navbar-nav>.active> a:hover {
   background: white;
   border-bottom: black solid 3px;
@@ -170,8 +168,8 @@ p {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-header { 
-	background-color: #005FA9; 
+header {
+	background-color: #005FA9;
 }
 
 /* Footer */
@@ -188,7 +186,7 @@ a {
 	padding-bottom: 50px;
 	background-color: #939597;
 	font-family: Impact, Charcoal, sans-serif;
-	font-size: 30px;
+	font-size: 20px;
 	position: relative;
 	height: auto;
 }
@@ -222,6 +220,11 @@ a {
 }
 
 /* Tables */
+thead {
+	font-weight: bold;
+	font-size: 15px;
+}
+
 table {
 	border-collapse: collapse;
 	width: 80%;
@@ -233,6 +236,7 @@ table, th, td {
 
 td {
 	vertical-align: bottom;
+	padding: 5px;
 }
 
 th {
@@ -255,38 +259,38 @@ th {
 	}
 
 	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr { 
-		display: block; 
+	table, thead, tbody, th, td, tr {
+		display: block;
 	}
-	
+
 	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr { 
+	thead tr {
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
-	
+
 	tr { border: 1px solid black; }
-	
-	td { 
+
+	td {
 		/* Behave  like a "row" */
 		border: none;
-		border-bottom: 1px solid black; 
+		border-bottom: 1px solid black;
 		position: relative;
-		padding-left: 50%; 
+		padding-left: 50%;
 	}
-	
-	td:before { 
+
+	td:before {
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
 		top: 6px;
 		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
+		width: 45%;
+		padding-right: 10px;
 		white-space: nowrap;
 	}
-	
+
 	/*
 	Label the data
 	*/
