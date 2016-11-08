@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% set active_page = "schedule" %}
+
+{% block body %}
+<div class="schedule">
+	<center>
+	<h2>Preseason</h2>
+		<table>
+			<thead class="schedule-table">
+				<td>Date</td>
+				<td>Opponent</td>
+				<td>Location</td>
+				<td>Kickoff Time</td>
+			</thead>	
+
+			{% for item in schedule %}
+			<tr>
+				<td>{{ item.Date }}</td>
+				<td>{{ item.Team }}</td>
+				<td>{{ item.Location }}</td>
+				<td>{{ item.Time }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+	<h2>Pacific Western Conference Schedule</h2>
+	<p>Please check <a href="http://pacwestrugby.com">pacwestrugby.com</a> for more information</p>
+	</center>
+</div>
+{% endblock %}

@@ -1,0 +1,312 @@
+/* Home Page */
+.teamphoto {
+	display: block;
+	margin: auto;
+	width: 90%;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.history {
+	padding: 100px;
+	text-align: center;
+}
+
+.home {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+/* Contact Page */
+.contact {
+	text-align: center;
+	padding: 20px;
+}
+
+/* Location Page */
+.location {
+	display: block;
+	font-size: 20px;
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.locationinfo {
+	padding-bottom: 20px
+}
+
+/* Media Page */
+.media {
+	width: 100%;
+	height: auto;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.vids {
+	display: block;
+	margin: 0 auto;
+}
+
+.item img {
+	width: auto;
+	height: 300px;
+	max-height: 300px;
+}
+
+.carousel-wrapper {
+	padding-bottom: 20px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	width: 50%;
+	margin: auto;
+}
+
+/* Information Page */
+.information {
+	padding-bottom: 20px;
+}
+
+.info {
+	text-align: center;
+}
+
+.dues {
+	width: 40%;
+    margin:0 auto;
+    text-align:left;
+}
+
+hr {
+	display: block;
+    height: 1px;
+    background: transparent;
+    width: 50%;
+    border: none;
+    border-top: solid 1px black;
+}
+
+/* Roster Page */
+.roster {
+	text-align: center;
+	padding: 20px;
+}
+
+td {
+	padding: 10px;
+}
+
+/* Schedule Page */
+.schedule {
+	padding: 20px;
+}
+
+
+
+/* Navbar */
+.affix { 
+	top: 0; 
+	width: 100%; 
+	z-index: 9999 !important; 
+}
+
+.affix + .container-fluid { padding-top: 50px; }
+
+.navbar {
+	border: 1px;
+	background-color: white;
+	-webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.navbar .navbar-nav {
+	width: 100%;
+	text-align: center;
+	background-color: white;
+	height: auto;
+}
+
+.navbar .navbar-nav > li {
+	float: none;
+	display: inline-block;
+	font-size: 20px;
+	font-family: Impact, Charcoal, sans-serif;
+	position: relative;
+}
+
+.nav.affix {
+	position: fixed;
+}
+
+.navbar-default .navbar-nav>.active> a, 
+.navbar-default .navbar-nav>.active> a:focus, 
+.navbar-default .navbar-nav>.active> a:hover {
+  background: white;
+  border-bottom: black solid 3px;
+  padding-bottom: 15px;
+}
+
+.top {
+	display: block;
+	background-color: #005FA9;
+	height: auto;
+	width: 80%;
+	position: relative;
+}
+
+html, body {
+	position: relative;
+	height: 100%;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header { 
+	background-color: #005FA9; 
+}
+
+/* Footer */
+footer {
+	background-color: #939597;
+}
+
+a {
+	color: black;
+}
+
+.footer {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #939597;
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 30px;
+	position: relative;
+	height: auto;
+}
+
+.copyright {
+	font-size: 15px;
+}
+
+.icon {
+	border-radius: 50%;
+}
+
+.icon:hover {
+	opacity: 0.6;
+	-webkit-transition: all 0.35s;
+	-moz-transition: all 0.35s;
+	transition: all 0.35s;
+	text-decoration: none;
+}
+
+.bottom {
+	margin: auto;
+	text-align: center;
+	list-style: none;
+	display: inline;
+}
+
+.bottom li {
+	display: inline-block;
+	padding-right: 25px;
+}
+
+/* Tables */
+table {
+	border-collapse: collapse;
+	width: 80%;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+td {
+	vertical-align: bottom;
+}
+
+th {
+	text-align: left;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+/* Styles */
+	.WallofFuckingText {
+		padding: 10px;
+	}
+
+	.dues {
+		width: 90%;
+	}
+
+	iframe {
+		width: 100%;
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid black; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid black; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	.roster td:nth-of-type(1):before { content: "Name"; }
+	.roster td:nth-of-type(2):before { content: "Position"; }
+	.roster td:nth-of-type(3):before { content: "Height"; }
+	.roster td:nth-of-type(4):before { content: "Weight"; }
+	.roster td:nth-of-type(5):before { content: "Year"; }
+	.roster td:nth-of-type(6):before { content: "Hometown"; }
+
+	.schedule td:nth-of-type(1):before { content: "Name"; }
+	.schedule td:nth-of-type(2):before { content: "Opponent"; }
+	.schedule td:nth-of-type(3):before { content: "Location"; }
+	.schedule td:nth-of-type(4):before { content: "Kickoff Time"; }
+
+	.contact td:nth-of-type(1):before { content: "Name"; }
+	.contact td:nth-of-type(2):before { content: "Position"; }
+	.contact td:nth-of-type(3):before { content: "Email"; }
+	.contact td:nth-of-type(4):before { content: "Phone Number"; }
+
+}
+
+

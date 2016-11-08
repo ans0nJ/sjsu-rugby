@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+{% set active_page = "information" %}
+
+{% block body %}
+<div class="information">
+	<div class="container-fluid">
+		<div class="info">
+			<h2>Practice Schedule</h2>
+			<p>Practice is Mon-Thurs at 6:30PM</p>
+			<p><a href="/location">See Field Location</a> for more information</p>
+		</div>
+
+		<hr>
+
+		<div class="info">
+			<div class="row">
+				<div>
+					<h2>Required Equipment</h2>
+					<p>Mouthguard</p>
+					<p>Cleats</p>
+					<p>Rugby Shorts</p>
+				</div>
+				<div>
+					<center>
+						<img src="static/img/rugbyequipment.jpg" width="300" height="300">
+					</center>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="info">
+			<h2>Dues</h2>
+			<p>Yearly Dues are $350*</p>
+			<p>*Players who pay in full within the first 2 weeks of the Fall Semester receive a $50 deduction, for a total of $300 for the year</p>
+
+			<center>
+				<p>Dues are essential to the growth of the club and are used to provide players with the following:</p>
+			</center>
+				<ul class="dues">
+					<li>Two practice jerseys (blue and gold), and one pair of practice shorts/socks</li>
+					<li>Game shorts and socks</li>
+					<li>Hotel expenses for overnight stays at Away games</li>
+					<li>Team meals</li>
+					<li>League and Conference fees</li>
+				</ul>
+		</div>
+			
+	</div>
+</div>
+{% endblock %}
