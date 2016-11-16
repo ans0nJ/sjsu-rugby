@@ -2,18 +2,31 @@
 {% set active_page = "location" %}
 
 {% block body %}
-<div class="location container-fluid">
+<div class="container-fluid">
 	<div>
-		<div class="locationinfo">
-			<center>
+		<div class="location-info">
 			<p>Our practice and match field is located at Spartan Stadium on
 			<a href="https://www.google.com/maps/dir/''/san+jose+spartan+stadium/@37.3196469,-121.9383362,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x808e3331dce260ed:0x8fd829805007db0c!2m2!1d-121.8682962!2d37.3196675">1251 S. 10th St. San Jose, CA. 95192</a></p>
-			</center>
+
+			<p>Practice is Mon-Thurs at 6:30PM.
+			The required equipment for practices and games are rugby shorts and jersey, mouthguards, and cleats. 
+			Yearly Dues are $350. Players who pay in full within the first 2 weeks of the Fall Semester receive a $50 deduction, for a total of $300 for the year.
+			Dues are essential to the growth of the club and are used to provide players with the following:
+				<ul class="dues">
+					<li>Two practice jerseys (blue and gold), and one pair of practice shorts/socks</li>
+					<li>Game shorts and socks</li>
+					<li>Hotel expenses for overnight stays at Away games</li>
+					<li>Team meals</li>
+					<li>League and Conference fees</li>
+				</ul>
+			</p>
 		</div>
 	</div>
 
-	<iframe width="600" height="450" frameborder="0" style="border:0"
-	src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwdyYGbmuK-QJ5pbmUCFn7IKzOn2MqCw0&q=san+jose+spartan+stadium" allowfullscreen></iframe>
+	<div class="location">
+		<iframe width="600" height="450" frameborder="0" style="border:0"
+		src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwdyYGbmuK-QJ5pbmUCFn7IKzOn2MqCw0&q=san+jose+spartan+stadium" allowfullscreen></iframe>
+	</div>
 
 </div>
 {% endblock %}

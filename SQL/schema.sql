@@ -22,3 +22,4 @@ CREATE TABLE contact (
 	Email varchar(255),
 	Phone varchar(255)
 );
+
