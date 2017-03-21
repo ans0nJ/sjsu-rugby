@@ -1,26 +1,20 @@
 {% extends "index.html" %}
 {% set active_page = "contact" %}
 
-{% block body %}
+{% block content %}
+
 <div class="contact">
-	<center>
-	<h2>Club Executive Board</h2>
-		<table border = 1>
-			<thead class="contact-table">
-				<td>Name</td>
-				<td>Position</td>
-				<td>Email</td>
-				<td>Contact Info</td>
-			</thead>
-			{% for info in contact %}
-			<tr class="table-rows">
-				<td>{{ info.Name }}</td>
-				<td>{{ info.Position }}</td>
-				<td>{{ info.email }}</td>
-				<td>{{ info.Phone }}</td>
-			</tr>
-			{% endfor %}
-		</table>
-	</center>
+    
+    {% for info in contact %}
+    <h3>{{ info.Name }}</h3>
+    <h4>{{ info.Position }}</h4>
+    <p>{{ info.Email }}</p>
+    <p>{{ info.Phone }}</p>
+
+    <br>
+
+    {% endfor %}
+
 </div>
+
 {% endblock %}

@@ -1,34 +1,33 @@
 {% extends "index.html" %}
 {% set active_page = "roster" %}
 
-{% block body %}
+{% block content %}
+
 <div class="roster">
-	<h2>Players</h2>
-	<center>
-	<table border=1 class="player-table">
-		<thead>
-			<td>Name</td>
-			<td>Position</td>
-			<td>Height</td>
-			<td>Weight</td>
-			<td>Year</td>
-			<td>Hometown</td>
-		</thead>
+    <center>
+    <table border=1 class="player-table">
+        <thead>
+            <td>Name</td>
+            <td>Position</td>
+            <td>Height</td>
+            <td>Weight</td>
+            <td>Year</td>
+            <td>Hometown</td>
+        </thead>
 
-		{% for player in roster %}
-		<tr class="table-rows">
-			<td>{{ player.Name }}</td>
-			<td>{{ player.Position }}</td>
-			<td>{{ player.Height }}</td>
-			<td>{{ player.Weight }}</td>
-			<td>{{ player.Year }}</td>
-			<td>{{ player.Hometown }}</td>
-		</tr>
-		{% endfor %}
-	</table>
-	</center>
-
-	<h2>Coaches</h2>
+        {% for player in roster %}
+        <tr>
+            <td>{{ player.Name }}</td>
+            <td>{{ player.Position }}</td>
+            <td>{{ player.Height }}</td>
+            <td>{{ player.Weight }}</td>
+            <td>{{ player.Year }}</td>
+            <td>{{ player.Hometown }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
 
 </div>
+
 {% endblock %}

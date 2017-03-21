@@ -22,9 +22,3 @@ CREATE TABLE contact (
 	Email text,
 	Phone text
 );
-DROP TABLE IF EXISTS coaches;
-CREATE TABLE coaches (
-	Name text primary key,
-	Position text,
-	Year text
-);
