@@ -1,29 +1,14 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
 
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-    <!-- JavaScript -->
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-
-    <!-- FontAwesome -->
-    <script src="https://use.fontawesome.com/eea2835d69.js"></script>
-
     <title>San Jose State University Men's Rugby Page</title>
 </head>
-
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -33,19 +18,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">
-                    <img class="teamphoto" src="{{ url_for('static', filename='img/sjsuheader.png')}}">
+                <a class="navbar-brand" href="{{ url_for('home') }}">
+                    <span><img class="logo" src="{{ url_for('static', filename='img/spartanlogo.jpg')}}"></span>
+                    Spartan Rugby
                 </a>
             </div>
-
             {% set navigation_bar = [
-            ('/schedule', 'schedule', 'Schedule'),
-            ('/roster', 'roster', 'Roster'),
-            ('/contact', 'contact', 'Contact')
+            ('/schedule/', 'schedule', 'Schedule'),
+            ('/roster/', 'roster', 'Roster'),
+            ('/contact/', 'contact', 'Contact')
             ] %}
-
-            {% set active_page = active_page|default('index') %}
-
+            {% set active_page = active_page|default('home') %}
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     {% for href, id, caption in navigation_bar %}
@@ -55,23 +38,29 @@
             </div>
         </div>
     </nav>
-
     <div class="body">
         {% block content %}
         {% endblock %}
     </div>
-
-    <div class="footer">
-        <center>
-            <ul class="icon-bar">
-                <li><a class="icon" href="https://www.facebook.com/SJSURugby/"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i> Facebook</a></li>
-                <li><a class="icon" href="https://twitter.com/sjsurugby"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i> Twitter</a></li>
-                <li><a class="icon" href="https://www.youtube.com/channel/UCw0dQ2r6L3QonqJR2S0JdFQ"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i> YouTube</a></li>
-            </ul>
-            <br>
-            <p class="copyright">&copy; San Jose State University Men's Rugby Club</p>
-        </center>
-    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://www.facebook.com/SJSURugby/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/sjsurugby"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCw0dQ2r6L3QonqJR2S0JdFQ"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <span class="copyright">Copyright &copy; San Jose State University Men's Rugby Club</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="https://use.fontawesome.com/eea2835d69.js"></script>
 </html>

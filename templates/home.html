@@ -1,70 +1,41 @@
 {% extends "index.html" %}
-
 {% block content %}
-
 <div class="home">
-
-    <div class="media">
-    	<div class="container carousel-wrapper">
-    	  <br>
-    	  <div id="Carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-    	    <!-- Indicators -->
-    	    <ol class="carousel-indicators">
-    	        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-    	        <!--
-    	        <li data-target="#Carousel" data-slide-to="1"></li>
-    	        -->
-    	    </ol>
-
-    	    <!-- Wrapper for slides -->
-    	    <div class="carousel-inner" role="listbox">
-    	        <div class="item active">
-    	            <img src="static/img/teamphotoofficial.jpg">
-    	        </div>
-
-                <!--
-    	        <div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Dy_Zc_8tIt4">
-					</iframe>
-			    </div>
-			    -->
-    	    </div>
-    	  </div>
-    	</div>
-    </div>
-
-    <div class="location-info about">
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+            </div>
+        </div>
+    </header>
+    <div class="about">
         <center>
-        <h2>About</h2>
+        <h3>About</h3>
         </center>
-        <hr>
+        <br>
         <p>The San Jose State University Men's Rugby Club was established in 1971 along with the San Jose Seahawks Rugby Football Club.
         The Men's club participates in the DIAA Pacific Western Conference for 15's and 7's side. In 2013, the 7's side won the
         Pacific Western Conference 7's tournament and participated in the USA Rugby 7's National Championships at North Carolina.
         If interested, please check out the location information below and show up to one of our practices!
         </p>
     </div>
-
-	<div class="location-info">
-	    <center>
-	    <h2>Location</h2>
-	    </center>
-	    <hr>
-		<p>Our practice and match field is located at CEFCU Stadium on
-		<a href="https://www.google.com/maps/dir/''/san+jose+spartan+stadium/@37.3196469,-121.9383362,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x808e3331dce260ed:0x8fd829805007db0c!2m2!1d-121.8682962!2d37.3196675">1251 S. 10th St. San Jose, CA. 95192</a></p>
-
-		<p>Practice is Mon-Thurs at 6:30PM.
-		The required equipment for practices and games are rugby shorts and jersey, mouthguards, and cleats.
-		Yearly Dues are $350. Players who pay in full within the first 2 weeks of the Fall Semester receive a $50 deduction, for a total of $300 for the year.
-		</p>
-	</div>
-
-
-    <div>
-		<iframe width="90%" height="600" frameborder="0" style="border:0"
-		src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwdyYGbmuK-QJ5pbmUCFn7IKzOn2MqCw0&q=san+jose+spartan+stadium" allowfullscreen></iframe>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 location-info">
+                <center>
+                <h3>Location</h3>
+                <br>
+                </center>
+                <p>Our practice and match field is located at CEFCU Stadium on
+                <a href="https://www.google.com/maps/dir/''/san+jose+spartan+stadium/@37.3196469,-121.9383362,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x808e3331dce260ed:0x8fd829805007db0c!2m2!1d-121.8682962!2d37.3196675">1251 S. 10th St. San Jose, CA. 95192</a>.
+                Practice is Mon-Thurs at 6:30PM.
+                The required equipment for practices and games are rugby shorts and jersey, mouthguards, and cleats.
+                Yearly Dues are $350. Players who pay in full within the first 2 weeks of the Fall Semester receive a $50 deduction, for a total of $300 for the year.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <iframe width="90%" height="400px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwdyYGbmuK-QJ5pbmUCFn7IKzOn2MqCw0&q=san+jose+spartan+stadium" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
-
 </div>
-
 {% endblock %}
