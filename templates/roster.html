@@ -1,35 +1,28 @@
 {% extends "index.html" %}
-
+{% block title %}San Jose State University Men's Rugby - Roster{% endblock %}
 {% set active_page = "roster" %}
-
 {% block content %}
-
 <div class="roster">
     <center>
     <h3>Roster</h3>
-    <table border=1 class="player-table">
+    <table class="table table-striped">
         <thead>
-            <td>Name</td>
-            <td>Position</td>
-            <td>Height</td>
-            <td>Weight</td>
-            <td>Year</td>
-            <td>Hometown</td>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Year</th>
+                <th>Hometown</th>
+            </tr>
         </thead>
-
         {% for player in roster %}
         <tr>
             <td>{{ player.Name }}</td>
             <td>{{ player.Position }}</td>
-            <td>{{ player.Height }}</td>
-            <td>{{ player.Weight }}</td>
             <td>{{ player.Year }}</td>
             <td>{{ player.Hometown }}</td>
         </tr>
         {% endfor %}
     </table>
-</center>
-
+    </center>
 </div>
-
 {% endblock %}

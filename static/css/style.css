@@ -3,7 +3,6 @@
     width: 100%;
     margin: auto;
     position: relative;
-    color: #555;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     background-color: #FFFAFA;
 }
@@ -42,7 +41,7 @@
 }
 
 .navbar-fixed-top .navbar-brand {
-    padding: 0 15px;
+    padding: 15px 0;
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -54,6 +53,11 @@
 /* Footer */
 footer {
 	background-color: #939597;
+}
+
+.bg-dark {
+  background-color: #222222;
+  color: white;
 }
 
 h1, h2, h3, strong {
@@ -97,7 +101,16 @@ ul.social-buttons li a:active {
   background-color: #fed136;
 }
 
+/* Tables */
+.table-striped {
+	background-color: #939597;
+}
+
 /* Home Page */
+.home {
+	color: #939597;
+}
+
 header {
   position: relative;
   min-width: 100%;
@@ -144,6 +157,7 @@ iframe {
 	padding-bottom: 40px;
 	margin-left: auto;
 	margin-right: auto;
+	color: #939597;
 }
 
 .name {
@@ -156,54 +170,14 @@ iframe {
 	width: auto;
 }
 
-/* Roster Page */
-.roster {
+/* Roster and Schedule Pages */
+.roster, .schedule {
+	display: block;
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-/* Schedule Page */
-.schedule {
-    display: block;
-	padding-top: 20px;
-	padding-bottom: 30px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-
-/* Tables */
-thead {
-	font-weight: bold;
-	font-size: 15px;
-}
-
-table {
-	border-collapse: collapse;
-	width: 80%;
-	height: auto;
-}
-
-table, th, td {
-	border: 1px solid black;
-}
-
-td {
-	vertical-align: bottom;
-	padding: 5px;
-}
-
-th {
-	text-align: left;
-}
-
-@media(min-width : 768px) {
-    .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
-    }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -219,6 +193,10 @@ th {
         padding: 15px 0;
     }
 
+    .navbar .active a {
+    	border-bottom: none;
+    }
+
     .about, .location-info{
     	padding: 1em;
     }
@@ -229,56 +207,11 @@ th {
 
     .body, .home {
         width: 100%;
+        padding-top: 40px;
     }
 
 	.schedule, .contact, .roster{
 	    width: 100%;
 	    padding-top: 0em;
 	}
-
-	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr {
-		display: block;
-	}
-
-	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr {
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-
-	tr { border: 1px solid black; }
-
-	td {
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid black;
-		position: relative;
-		padding-left: 50%;
-	}
-
-	td:before {
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%;
-		padding-right: 10px;
-		white-space: nowrap;
-	}
-
-	/* Label the data */
-	.roster td:nth-of-type(1):before { content: "Name"; }
-	.roster td:nth-of-type(2):before { content: "Position"; }
-	.roster td:nth-of-type(3):before { content: "Height"; }
-	.roster td:nth-of-type(4):before { content: "Weight"; }
-	.roster td:nth-of-type(5):before { content: "Year"; }
-	.roster td:nth-of-type(6):before { content: "Hometown"; }
-
-	.schedule td:nth-of-type(1):before { content: "Name"; }
-	.schedule td:nth-of-type(2):before { content: "Opponent"; }
-	.schedule td:nth-of-type(3):before { content: "Location"; }
-	.schedule td:nth-of-type(4):before { content: "Kickoff Time"; }
 }

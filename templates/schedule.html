@@ -1,30 +1,28 @@
 {% extends "index.html" %}
-
+{% block title %}San Jose State University Men's Rugby - Schedule{% endblock %}
 {% set active_page = "schedule" %}
-
 {% block content %}
-
 <div class="schedule">
     <center>
     <h3>2016-2017 Schedule</h3>
-        <table>
-            <thead class="schedule-table">
-                <td>Date</td>
-                <td>Opponent</td>
-                <td>Location</td>
-                <td>Kickoff Time</td>
-            </thead>
-
-            {% for item in schedule %}
+    <table class="table table-striped">
+        <thead>
             <tr>
-                <td>{{ item.Date }}</td>
-                <td>{{ item.Team }}</td>
-                <td>{{ item.Location }}</td>
-                <td>{{ item.Time }}</td>
+                <th>Date</th>
+                <th>Opponent</th>
+                <th>Location</th>
+                <th>Kickoff Time</th>
             </tr>
-            {% endfor %}
-        </table>
+        </thead>
+        {% for item in schedule %}
+        <tr>
+            <td>{{ item.Date }}</td>
+            <td>{{ item.Team }}</td>
+            <td>{{ item.Location }}</td>
+            <td>{{ item.Time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
     </center>
 </div>
-
 {% endblock %}
