@@ -5,3 +5,6 @@ __pycache__/
 __init__.pyc
 config.pyc
 db.pyc
+models.pyc
+views.pyc
+config.py
