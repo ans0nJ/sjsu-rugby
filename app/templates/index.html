@@ -44,6 +44,7 @@
 						<!-- Schedule -->
 							<article id="schedule">
 								<h3 class="major">Schedule</h3>
+								<!-- <span class="image main"><img src="/static/img/pic1.jpg" alt="" /></span> -->
 								<div class="schedule">
 									<center>
 									<table class="table table-striped">
@@ -57,10 +58,10 @@
 										</thead>
 										{% for item in schedule %}
 										<tr>
-											<td>{{ item.Date }}</td>
-											<td>{{ item.Team }}</td>
-											<td>{{ item.Location }}</td>
-											<td>{{ item.Time }}</td>
+											<td>{{ item.date }}</td>
+											<td>{{ item.team }}</td>
+											<td>{{ item.location }}</td>
+											<td>{{ item.time }}</td>
 										</tr>
 										{% endfor %}
 									</table>
@@ -74,7 +75,8 @@
 						<!-- Roster -->
 							<article id="roster">
 								<h3 class="major">Roster</h3>
-								<table class="table table-striped">
+								<!-- <span class="image main"><img src="/static/img/overlay.png" alt="" /></span> -->
+								<table class="table-wrapper">
 									<thead>
 										<tr>
 											<th>Name</th>
@@ -85,10 +87,10 @@
 									</thead>
 									{% for player in roster %}
 									<tr>
-										<td>{{ player.Name }}</td>
-										<td>{{ player.Position }}</td>
-										<td>{{ player.Year }}</td>
-										<td>{{ player.Hometown }}</td>
+										<td>{{ player.name }}</td>
+										<td>{{ player.position }}</td>
+										<td>{{ player.year }}</td>
+										<td>{{ player.hometown }}</td>
 									</tr>
 									{% endfor %}
 								</table>
@@ -98,24 +100,33 @@
 							<article id="contact">
 								<h3 class="major">Contact</h3>
 								<form method="post" action="#">
+									{{ form.hidden_tag() }}
 									<div class="fields">
 										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<!-- <label for="name">Name</label>
+											<input type="text" name="name" id="name" /> -->
+											{{ form.name.label }}
+      										{{ form.name }}
 										</div>
 										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<!-- <label for="email">Email</label>
+											<input type="text" name="email" id="email" /> -->
+											{{ form.email.label }}
+											{{ form.email }}
 										</div>
 										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<!-- <label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea> -->
+											{{ form.message.label }}
+											{{ form.message }}
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
+										<!-- <li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li> -->
+										<li class="primary">{{ form.submit }}</li>
 									</ul>
+									
 								</form>
 								<ul class="icons">
 									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>

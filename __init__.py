@@ -15,14 +15,19 @@ def create_app():
 
     @app.route("/")
     def home():
-        return render_template("home.html")
+        db = get_db()
+        cur = db.execute("SELECT * FROM schedule")
+        schedule = cur.fetchall()
+        cur = db.execute("SELECT * FROM roster ORDER BY Name ASC")
+        roster = cur.fetchall()
+        return render_template("index.html", schedule=schedule, roster = roster)
 
-    @app.route("/schedule/")
+    @app.route("/#schedule/")
     def schedule():
         db = get_db()
         cur = db.execute("SELECT * FROM schedule")
         schedule = cur.fetchall()
-        return render_template("schedule.html", schedule=schedule)
+        return render_template("index.html", schedule=schedule)
 
     @app.route("/roster/")
     def roster():
