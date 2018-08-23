@@ -1,3 +1,8 @@
 Flask==1.0.2
 Flask-SQLAlchemy==2.3.2
-Flask-Mail
+Flask-Mail==0.9.1
+Flask-WTF==0.14.2
+Jinja2==2.10
+SQLAlchemy==1.2.8
+requests==2.13.0
+WTForms==2.2.1

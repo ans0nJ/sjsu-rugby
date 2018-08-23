@@ -19,21 +19,21 @@ app.config["MAIL_PASSWORD"] = MAIL_PASSWORD
 
 
 @app.route("/", methods=('GET', 'POST'))
-def home():
+def index():
     schedule = Schedule.query.all()
-    roster = Roster.query.all()
+    roster = Roster.query.order_by('name').all()
     
     mail.init_app(app)
 
     form = ContactForm(request.form)
 
     if request.method == 'POST' and form.validate():
-        msg = Message('Test', sender=MAIL_USERNAME, recipients=[MAIL_USERNAME])
+        msg = Message("Message from " + form.name.data, sender=MAIL_USERNAME, recipients=[MAIL_USERNAME])
         msg.body = """
         From: %s <%s>
         %s
         """ % (form.name.data, form.email.data, form.message.data)
         mail.send(msg)
-        return redirect(url_for("home"))
+        return redirect(url_for("index"))
 
     return render_template("index.html", schedule=schedule, roster=roster, form=form)
